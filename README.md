@@ -4,7 +4,7 @@ This is a sbt-based, scala Akka project that sets up a web project with REST and
 
 * uses sbt dependencies instead of setting up maven repositories
 * uses sbt 0.12.x and the xsbt-web-plugin
-* targets Akka 2.0.4 and Scala 2.9.2
+* targets Akka 2.1.2 and Scala 2.10.1
 
 This template is released under Apache 2 License.
 
@@ -34,16 +34,19 @@ You'll probably want to make changes in the following files:
 Notes
 -----
 
-* The Akka version is hard-coded to 2.0.4. If you want to change that, you'll need to change build.sbt and src/main/resources/akka.conf
-* The Boot.scala file is no longer required in Akka 2.0 if you need fault tolerance please see the http://doc.akka.io/docs/akka/2.0.4/scala/fault-tolerance.html
+* The Akka version is hard-coded to 2.1.2. If you want to change that, you'll need to change build.sbt and src/main/resources/akka.conf
+* The Boot.scala file is no longer required from Akka 2.0 onwards. In case you need fault tolerance please see the http://doc.akka.io/docs/akka/2.1.2/scala/fault-tolerance.html
 * ActorCall.scala contains some boilerplate code to make actor calls
 
 Changelog
 ---------
+2013-04-28
+
+* Updated to akka 2.1.2, scala 2.10.1, jersey 1.17, slf4j 1.7.5 [cspellmann]
+
 2012-11-14
 
 * Updated to sbt 0.12.1, akka 2.0.4, jersey 1.15, Servlet 3.0.1, Jetty 8.1.8 [cspellmann]
-
 
 2012-05-31
 

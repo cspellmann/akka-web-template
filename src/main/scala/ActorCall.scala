@@ -5,10 +5,12 @@
 
 package akkawebtemplate
 
+import scala.language.postfixOps
+
 import akka.actor.ActorRef
-import akka.dispatch.Await
+import scala.concurrent.Await;
 import akka.pattern.ask
-import akka.util.duration.intToDurationInt
+import scala.concurrent.duration._
 import akka.util.Timeout
 
 /** 
@@ -20,6 +22,6 @@ object ActorCall {
    try {
      new Some(Await.result(actorRef ? msg, timeout.duration).asInstanceOf[A])
    } catch {
-     case _ => None    
+     case _ : Throwable => None    
    }
 }
